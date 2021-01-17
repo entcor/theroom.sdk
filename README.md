@@ -520,7 +520,7 @@ interactions (i.e. bots) locally while in development.
 
 ## Use as Dependency
 
-`yarn add @rocket.chat/sdk` or `npm install --save @rocket.chat/sdk`
+`yarn add @rocket.chat/sdk` or `npm install --save k`
 
 ES6 module, using async
 

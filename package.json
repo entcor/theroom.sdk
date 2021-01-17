@@ -28,7 +28,7 @@
     "test:package": "preview && mocha 'src/index.spec.ts'",
     "start": "ts-node ./src/utils/start",
     "docs": "rimraf ./docs && typedoc --options ./typedoc.json ./src/lib",
-    "prebuild": "npm run test",
+    "__prebuild": "npm run test",
     "build": "rimraf ./dist/* && tsc && npm run test:package"
   },
   "husky": {

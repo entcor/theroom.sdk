@@ -9,14 +9,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+}
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
     if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
     result["default"] = mod;
     return result;
-};
+}
 Object.defineProperty(exports, "__esModule", { value: true });
 const events_1 = require("events");
 const asteroid_1 = __importDefault(require("asteroid"));
@@ -310,8 +310,9 @@ function reactToMessages(callback) {
         if (changedMessageQuery.result && changedMessageQuery.result.length > 0) {
             const changedMessage = changedMessageQuery.result[0];
             if (Array.isArray(changedMessage.args)) {
-                log_1.logger.info(`[received] Message in room ${changedMessage.args[0].rid}`);
-                callback(null, changedMessage.args[0], changedMessage.args[1]);
+                const msg = changedMessage.args[0] ? Array.isArray(changedMessage.args[0]) : changedMessage.args[0];
+                log_1.logger.info(`[received] Message in room ${msg.rid}`);
+                callback(null, msg, changedMessage.args[1]);
             }
             else {
                 log_1.logger.debug('[received] Update without message args');

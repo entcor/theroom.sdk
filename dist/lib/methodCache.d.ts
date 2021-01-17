@@ -1,3 +1,4 @@
+/// <reference types="lru-cache" />
 import LRU from 'lru-cache';
 /** @TODO: Remove ! post-fix expression when TypeScript #9619 resolved */
 export declare let instance: any;

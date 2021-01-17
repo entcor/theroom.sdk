@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import * as rocketchat from '@rocket.chat/sdk'
+import * as rocketchat from './'
 
 describe('index:', () => {
   it('exports all lib members', () => {
