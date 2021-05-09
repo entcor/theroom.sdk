@@ -528,11 +528,18 @@ function execSlashCommand(command) {
     });
 }
 exports.execSlashCommand = execSlashCommand;
-/** Add slash command */
+/** createChannel command */
 function createChannel(name, members, readOnly = false, customFields = {}) {
     return __awaiter(this, void 0, void 0, function* () {
         return asyncCall('createChannel', [name, members, readOnly, customFields]);
     });
 }
 exports.createChannel = createChannel;
+/** notifyUser command */
+function notifyUser(user, roomId, message) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return asyncCall('notifyUser', [user, roomId, message]);
+    });
+}
+exports.notifyUser = notifyUser;
 //# sourceMappingURL=driver.js.map

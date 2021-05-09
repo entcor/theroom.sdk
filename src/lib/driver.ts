@@ -574,7 +574,12 @@ export async function execSlashCommand (command: ISlashCommand): Promise<void> {
   return asyncCall('slashCommand', command)
 }
 
-/** Add slash command */
+/** createChannel command */
 export async function createChannel (name: string, members: string[], readOnly: boolean = false, customFields: any = {}): Promise<void> {
   return asyncCall('createChannel', [name, members, readOnly, customFields]);
+}
+
+/** notifyUser command */
+export async function notifyUser (user: string, roomId: string, message: string): Promise<void> {
+  return asyncCall('notifyUser', [user, roomId, message]);
 }
