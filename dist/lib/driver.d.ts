@@ -202,3 +202,5 @@ export declare function editMessage(message: IMessage): Promise<IMessage>;
 export declare function setReaction(emoji: string, messageId: string): Promise<any>;
 /** Add slash command */
 export declare function execSlashCommand(command: ISlashCommand): Promise<void>;
+/** Add slash command */
+export declare function createChannel(name: string, members: string[], readOnly?: boolean, customFields?: any): Promise<void>;

@@ -528,4 +528,11 @@ function execSlashCommand(command) {
     });
 }
 exports.execSlashCommand = execSlashCommand;
+/** Add slash command */
+function createChannel(name, members, readOnly = false, customFields = {}) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return asyncCall('createChannel', [name, members, readOnly, customFields]);
+    });
+}
+exports.createChannel = createChannel;
 //# sourceMappingURL=driver.js.map

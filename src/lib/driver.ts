@@ -573,3 +573,8 @@ export function setReaction (emoji: string, messageId: string) {
 export async function execSlashCommand (command: ISlashCommand): Promise<void> {
   return asyncCall('slashCommand', command)
 }
+
+/** Add slash command */
+export async function createChannel (name: string, members: string[], readOnly: boolean = false, customFields: any = {}): Promise<void> {
+  return asyncCall('createChannel', [name, members, readOnly, customFields]);
+}
